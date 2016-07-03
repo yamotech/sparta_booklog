@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
     @book = Book.find(params[:book_id])
     @review = Review.new(
       book_id: params[:book_id],
-      uzer_id: current_user.id,
+      user_id: current_user.id,
       body: review_params["body"]
     )
     if @review.save
